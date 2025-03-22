@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <link rel="stylesheet" href="stye.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="IMG_3062.jpg">
+    <title>AEGONA CHANNEL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .header {
+            background: green;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: url('images/logo.jpg') no-repeat center center;
+            background-size: cover;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .product {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            margin: 15px;
+            text-align: center;
+            padding: 100px 15px;
+            transition: transform 0.5s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .text {
+            font-size: 22px;
+            margin: 20px 0;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+        }
+        .brx2 {
+            font-size: 22px;
+            margin: 20px 0;
+            font-weight: bold;
+            color: rgb(255, 0, 0);
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 20px;
+            font-size: 18px;
+            color: white;
+            background: green;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: darkgreen;
+        }
+        .menu {
+            position: absolute;
+            right: 20px;
+            top: 50px;
+        }
+        .menu button {
+            display: block;
+            margin: 10px;
+            padding: 12px;
+            border: 2px solid green;
+            background: white;
+            color: green;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .menu button:hover {
+            background: green;
+            color: white;
+        }
+
+        .icon {
+            display: none;
+            margin-left: 10px;
+            font-size: 18px;
+            color: green;
+        }
+
+        .icon.checking {
+            font-size: 18px;
+            color: orange;
+        }
+
+        .icon.checked {
+            font-size: 18px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="IMG_3062.jpg" alt="โลโก้" class="logo">
+        AEGONA CHANNEL
+    </div>
+
+    <div class="container">
+        <div class="product">
+            <img src="ปกคริปAction&Stuff.png" alt="สินค้า">
+            <div class="text">แจก Addon Action & Stuff !! <br> ฟรี มายคราฟ มือถือ </div>
+            <div class="brx2">กดติดตาม เพื่อดาวโหลด ! <br> Sub4unlock!</div>
+            <button class="button-85" role="button" onclick="subscribeAction()">subscribe channel</button>
+            <span id="icon" class="icon">กำลังเช็ค...</span>
+        </div>
+    </div>
+
+    <script>
+        let hasClicked = false;
+
+        // สร้างเสียง
+        const successSound = new Audio("new-information-153314.mp3"); // แก้ไขเส้นทางเสียง
+
+        function subscribeAction() {
+            const icon = document.getElementById('icon');
+
+            if (!hasClicked) {
+                icon.style.display = 'inline';  // แสดงข้อความ "กำลังเช็ค..."
+                icon.classList.add('checking');  // เพิ่มคลาสเพื่อแสดงข้อความ "กำลังเช็ค..."
+                icon.textContent = "กำลังเช็ค...";  // เปลี่ยนข้อความเป็น "กำลังเช็ค..."
+
+                // เปิดลิงก์ในแท็บใหม่
+                window.open("https://youtube.com/@aegonachannel186?sub_confirmation=1", "_blank");
+
+                // ปรับสถานะให้เป็นว่าได้คลิกแล้ว
+                hasClicked = true;
+
+                // หลังจาก 5 วินาที เปลี่ยนข้อความเป็น "สำเร็จ!" และเล่นเสียง
+                setTimeout(() => {
+                    icon.textContent = "สำเร็จ!"; // เปลี่ยนข้อความ
+                    icon.classList.remove('checking'); // ลบคลาส "กำลังเช็ค..."
+                    icon.classList.add('checked');  // เพิ่มคลาส "สำเร็จ!"
+                    successSound.play(); // เล่นเสียง
+                }, 6500);
+
+            } else {
+                // เมื่อคลิกอีกครั้ง ให้เปิดลิงก์ใหม่
+                window.open("https://tlauncher.org/download/25847", "_blank");
+            }
+        }
+    </script>
+</body>
+</html>
