@@ -141,39 +141,38 @@
         </div>
     </div>
 
-    <script>
-        let hasClicked = false;
+  <script>
+    let hasClicked = false;
+    const successSound = new Audio("new-information-153314.mp3");
 
-        // สร้างเสียง
-        const successSound = new Audio("new-information-153314.mp3"); // แก้ไขเส้นทางเสียง
+    function subscribeAction() {
+        const icon = document.getElementById('icon');
 
-        function subscribeAction() {
-            const icon = document.getElementById('icon');
+        if (!hasClicked) {
+            // แสดงข้อความ "กำลังเช็ค..."
+            icon.style.display = 'inline';
+            icon.classList.add('checking');
+            icon.textContent = "กำลังเช็ค...";
 
-            if (!hasClicked) {
-                icon.style.display = 'inline';  // แสดงข้อความ "กำลังเช็ค..."
-                icon.classList.add('checking');  // เพิ่มคลาสเพื่อแสดงข้อความ "กำลังเช็ค..."
-                icon.textContent = "กำลังเช็ค...";  // เปลี่ยนข้อความเป็น "กำลังเช็ค..."
+            // เปิดลิงก์ YouTube ทันที
+            window.open("https://youtube.com/@aegonachannel186?sub_confirmation=1", "_blank");
 
-                // เปิดลิงก์ในแท็บใหม่
-                window.open("https://youtube.com/@aegonachannel186?sub_confirmation=1", "_blank");
+            // ตั้งค่าให้สามารถกดปุ่มไปลิงก์อื่นได้ทันที
+            hasClicked = true;
 
-                // ปรับสถานะให้เป็นว่าได้คลิกแล้ว
-                hasClicked = true;
-
-                // หลังจาก 5 วินาที เปลี่ยนข้อความเป็น "สำเร็จ!" และเล่นเสียง
-                setTimeout(() => {
-                    icon.textContent = "สำเร็จ!"; // เปลี่ยนข้อความ
-                    icon.classList.remove('checking'); // ลบคลาส "กำลังเช็ค..."
-                    icon.classList.add('checked');  // เพิ่มคลาส "สำเร็จ!"
-                    successSound.play(); // เล่นเสียง
-                }, 14000);
-
-            } else {
-                // เมื่อคลิกอีกครั้ง ให้เปิดลิงก์ใหม่
-                window.open("https://tlauncher.org/download/25847", "_blank");
-            }
+            // ตั้งเวลา 14 วินาทีเพื่อเปลี่ยนเป็น "สำเร็จ!" และเล่นเสียง
+            setTimeout(() => {
+                icon.textContent = "สำเร็จ!";
+                icon.classList.remove('checking');
+                icon.classList.add('checked');
+                successSound.play();
+            }, 14000);
+        } else {
+            // เมื่อคลิกอีกครั้ง เปิดลิงก์อื่น
+            window.open("https://tlauncher.org/download/25847", "_blank");
         }
-    </script>
+    }
+</script>
+
 </body>
 </html>
