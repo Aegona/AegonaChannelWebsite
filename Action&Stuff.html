@@ -142,36 +142,47 @@
     </div>
 
   <script>
-    let hasClicked = false;
-    const successSound = new Audio("new-information-153314.mp3");
+   let hasClicked = false;
+let isSuccess = false; // ตัวแปรตรวจสอบว่าการสมัครสำเร็จแล้วหรือยัง
 
-    function subscribeAction() {
-        const icon = document.getElementById('icon');
+// สร้างเสียง
+const successSound = new Audio("new-information-153314.mp3");
 
-        if (!hasClicked) {
-            // แสดงข้อความ "กำลังเช็ค..."
-            icon.style.display = 'inline';
-            icon.classList.add('checking');
-            icon.textContent = "กำลังเช็ค...";
+function subscribeAction() {
+    const icon = document.getElementById('icon');
 
-            // เปิดลิงก์ YouTube ทันที
-            window.open("https://youtube.com/@aegonachannel186?sub_confirmation=1", "_blank");
+    if (!hasClicked) {
+        icon.style.display = 'inline';  
+        icon.classList.add('checking');  
+        icon.textContent = "กำลังเช็ค...";  
 
-            // ตั้งค่าให้สามารถกดปุ่มไปลิงก์อื่นได้ทันที
-            hasClicked = true;
+        // เปิดลิงก์ติดตาม YouTube
+        window.open("https://youtube.com/@aegonachannel186?sub_confirmation=1", "_blank");
+        hasClicked = true;
 
-            // ตั้งเวลา 14 วินาทีเพื่อเปลี่ยนเป็น "สำเร็จ!" และเล่นเสียง
-            setTimeout(() => {
-                icon.textContent = "สำเร็จ!";
-                icon.classList.remove('checking');
-                icon.classList.add('checked');
-                successSound.play();
-            }, 14000);
-        } else {
-            // เมื่อคลิกอีกครั้ง เปิดลิงก์อื่น
+        // หลังจาก 10 วินาที ให้เปลี่ยนเป็นสำเร็จและเล่นเสียง
+        setTimeout(() => {
+            icon.textContent = "สำเร็จ!"; 
+            icon.classList.remove('checking'); 
+            icon.classList.add('checked');  
+            successSound.play(); // เล่นเสียง
+
+            // เมื่อเสียงเล่นเสร็จ ให้เปลี่ยนค่า isSuccess เป็น true
+            successSound.onended = () => {
+                isSuccess = true;
+            };
+
+        }, 10000);
+
+    } else {
+        // เช็กว่าการสมัครสำเร็จหรือยัง
+        if (isSuccess) {
             window.open("https://tlauncher.org/download/25847", "_blank");
+        } else {
+            alert("กำลังรอให้ ระบบตรวจสอบ!");
         }
     }
+}
 </script>
 
 </body>
