@@ -286,38 +286,47 @@
     </div>
 
     <script>
-        let hasClicked = false;
+let hasClicked = false;
+let isSuccess = false; // ตัวแปรตรวจสอบว่าการสมัครสำเร็จแล้วหรือยัง
 
-        // สร้างเสียง
-        const successSound = new Audio("new-information-153314.mp3"); // แก้ไขเส้นทางเสียง
+// สร้างเสียง
+const successSound = new Audio("new-information-153314.mp3");
 
-        function subscribeAction() {
-            const icon = document.getElementById('icon');
+function subscribeAction() {
+    const icon = document.getElementById('icon');
 
-            if (!hasClicked) {
-                icon.style.display = 'inline';  // แสดงข้อความ "กำลังเช็ค..."
-                icon.classList.add('checking');  // เพิ่มคลาสเพื่อแสดงข้อความ "กำลังเช็ค..."
-                icon.textContent = "กำลังเช็ค...";  // เปลี่ยนข้อความเป็น "กำลังเช็ค..."
+    if (!hasClicked) {
+        icon.style.display = 'inline';  
+        icon.classList.add('checking');  
+        icon.textContent = "กำลังเช็ค...";  
 
-                // เปิดลิงก์ในแท็บใหม่
-                window.open("https://youtube.com/@aegonachannel186?sub_confirmation=1", "_blank");
+        // เปิดลิงก์ติดตาม YouTube
+        window.open("https://youtube.com/@aegonachannel186?sub_confirmation=1", "_blank");
+        hasClicked = true;
 
-                // ปรับสถานะให้เป็นว่าได้คลิกแล้ว
-                hasClicked = true;
+        // หลังจาก 10 วินาที ให้เปลี่ยนเป็นสำเร็จและเล่นเสียง
+        setTimeout(() => {
+            icon.textContent = "สำเร็จ!"; 
+            icon.classList.remove('checking'); 
+            icon.classList.add('checked');  
+            successSound.play(); // เล่นเสียง
 
-                // หลังจาก 5 วินาที เปลี่ยนข้อความเป็น "สำเร็จ!" และเล่นเสียง
-                setTimeout(() => {
-                    icon.textContent = "สำเร็จ!"; // เปลี่ยนข้อความ
-                    icon.classList.remove('checking'); // ลบคลาส "กำลังเช็ค..."
-                    icon.classList.add('checked');  // เพิ่มคลาส "สำเร็จ!"
-                    successSound.play(); // เล่นเสียง
-                }, 14000);
+            // เมื่อเสียงเล่นเสร็จ ให้เปลี่ยนค่า isSuccess เป็น true
+            successSound.onended = () => {
+                isSuccess = true;
+            };
 
-            } else {
-                // เมื่อคลิกอีกครั้ง ให้เปิดลิงก์ใหม่
-                window.open("error.html", "_blank");
-            }
+        }, 10000);
+
+    } else {
+        // เช็กว่าการสมัครสำเร็จหรือยัง
+        if (isSuccess) {
+            window.open("error.html", "_blank");
+        } else {
+            alert("กำลังรอให้ ระบบตรวจสอบ!");
         }
+    }
+}
     </script>
 </body>
 </html>
