@@ -1,221 +1,186 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-adsense-account" content="ca-pub-7300768637767766" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300768637767766" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-7300768637767766">
 
-  <!-- ฟอนต์โมเดิร์น -->
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
-  
-  <link rel="icon" type="image/x-icon" href="IMG_3062.jpg">
-  <title>AEGONA CHANNEL</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300768637767766" crossorigin="anonymous"></script>
 
-  <style>
-    body {
-      font-family: 'Prompt', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="IMG_3062.jpg">
+    <title>AEGONA CHANNEL</title>
 
-    .header {
-      background: #00a86b;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-    }
-
-    .logo {
-      width: 60px;
-      height: 60px;
-      background: url('images/logo.jpg') no-repeat center center;
-      background-size: cover;
-      margin-right: 15px;
-      border-radius: 50%;
-    }
-
-    .menu {
-      position: absolute;
-      right: 20px;
-      top: 50px;
-    }
-
-    .menu button {
-      display: block;
-      margin: 10px;
-      padding: 12px 20px;
-      border: none;
-      background: white;
-      color: #00a86b;
-      font-size: 16px;
-      border-radius: 5px;
-      font-weight: 500;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .menu button:hover {
-      background: #00a86b;
-      color: white;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 20px;
-      padding: 20px;
-    }
-
-    .product {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 500px;
-      margin: 15px;
-      text-align: center;
-      padding: 15px;
-      transition: transform 0.2s;
-    }
-
-    .product:hover {
-      transform: scale(1.03);
-    }
-
-    .product img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .text {
-      font-size: 20px;
-      margin: 12px 0;
-      font-weight: 600;
-      color: #222;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 20px;
-      font-size: 16px;
-      color: white;
-      background: #00a86b;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .button:hover {
-      background: #007e56;
-    }
-
-    .visitor-counter {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: rgba(0, 0, 0, 0.75);
-      color: white;
-      padding: 10px 15px;
-      border-radius: 8px;
-      font-size: 16px;
-      z-index: 100;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #222;
-      color: #fff;
-      margin-top: 40px;
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .about-section {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-      font-size: 18px;
-      line-height: 1.8;
-      color: #444;
-    }
-
-    .about-section h2 {
-      color: #00a86b;
-      font-weight: 700;
-    }
-  </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .header {
+            background: green;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: url('images/logo.jpg') no-repeat center center;
+            background-size: cover;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .product {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            margin: 15px;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.2s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .text {
+            font-size: 22px;
+            margin: 10px 0;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 20px;
+            font-size: 18px;
+            color: white;
+            background: green;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: darkgreen;
+        }
+        .menu {
+            position: absolute;
+            right: 20px;
+            top: 50px;
+        }
+        .menu button {
+            display: block;
+            margin: 10px;
+            padding: 12px;
+            border: 2px solid green;
+            background: white;
+            color: green;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .menu button:hover {
+            background: green;
+            color: white;
+        }
+        .visitor-counter {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #222;
+            color: #fff;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-
-  <div class="header">
-    <img src="IMG_3062.jpg" alt="โลโก้" class="logo">
-    AEGONA CHANNEL
-  </div>
-
-  <div class="menu">
-    <button onclick="window.location.href='about.html'">เกี่ยวกับเรา</button>
-    <button onclick="window.location.href='contact.html'">ติดต่อเรา</button>
-  </div>
-
-  <!-- แนะนำเว็บไซต์ -->
-  <div class="about-section">
-    <h2>เกี่ยวกับ AEGONA CHANNEL</h2>
-    <p>
-      ยินดีต้อนรับสู่ <strong>AEGONA CHANNEL</strong> เว็บไซต์รวมเนื้อหา Minecraft สำหรับผู้เล่นมือถือ ไม่ว่าจะเป็น Addon, Mod และวิธีการติดตั้งต่าง ๆ
-      เว็บไซต์นี้จัดทำขึ้นเพื่อแบ่งปันสิ่งดี ๆ แก่แฟน ๆ เกม Minecraft โดยไม่เสียค่าใช้จ่าย พร้อมคลิปแนะนำและลิงก์ดาวน์โหลดที่ปลอดภัย 💚
-    </p>
-  </div>
-
-  <div class="container">
-    <div class="product">
-      <img src="ปกคริปAction&Stuff.png" alt="สินค้า">
-      <div class="text">แจก Addon Action & Stuff !! <br> ฟรี มายคราฟ มือถือ</div>
-      <button class="button" onclick="window.location.href='Action&Stuff.html'">คลิก</button>
+    <div class="header">
+        <img src="IMG_3062.jpg" alt="โลโก้" class="logo">
+        AEGONA CHANNEL
     </div>
-    <div class="product">
-      <img src="หกดหำๆำพฟหดหกดดหกหกดหกเหกเ.png" alt="สินค้า">
-      <div class="text">สอนโหลด addon essential ฟรี!!</div>
-      <button class="button" onclick="window.location.href='Essential.html'">คลิก</button>
+
+    <div class="menu">
+        <button onclick="window.location.href='about.html'">เกี่ยวกับเรา</button>
+        <button onclick="window.location.href='contact.html'">ติดต่อเรา</button>
     </div>
-    <div class="product">
-      <img src="ปกสอนโหลดXeno.png" alt="สินค้า">
-      <div class="text">สอนโหลดตัวรัน Xeno ฟรี!!</div>
-      <button class="button" onclick="window.location.href='Xeno.html'">คลิก</button>
+
+    <!-- แนะนำเว็บไซต์ -->
+    <div style="padding: 20px; max-width: 800px; margin: auto; font-size: 18px;">
+        <h2>เกี่ยวกับ AEGONA CHANNEL</h2>
+        <p>
+            ยินดีต้อนรับสู่ <strong>AEGONA CHANNEL</strong> เว็บไซต์ที่รวมเนื้อหา <strong>Minecraft สำหรับมือถือ</strong> เช่น Addon, Mod, และวิธีการติดตั้งต่าง ๆ
+            เว็บไซต์นี้จัดทำขึ้นเพื่อแบ่งปันสิ่งดี ๆ ให้แฟน ๆ เกม Minecraft โดยไม่เสียค่าใช้จ่าย พร้อมคลิปแนะนำและลิงก์ดาวน์โหลดที่ปลอดภัย
+        </p>
     </div>
-  </div>
 
-  <!-- ตัวนับจำนวนผู้เข้าชม -->
-  <div class="visitor-counter">
-    จำนวนผู้เข้าชม: <span id="counter">0</span>
-  </div>
+    <div class="container">
+        <div class="product">
+            <img src="ปกคริปAction&Stuff.png" alt="แจก Addon Action & Stuff">
+            <div class="text">แจก Addon Action & Stuff !! <br> ฟรี มายคราฟ มือถือ</div>
+            <button class="button" onclick="window.location.href='Action&Stuff.html'">คลิก</button>
+        </div>
+        <div class="product">
+            <img src="หกดหำๆำพฟหดหกดดหกหกดหกเหกเ.png" alt="แจก addon essential ฟรี">
+            <div class="text">สอนโหลด addon essential ฟรี!!</div>
+            <button class="button" onclick="window.location.href='Essential.html'">คลิก</button>
+        </div>
+        <div class="product">
+            <img src="ปกสอนโหลดXeno.png" alt="สอนโหลด Xeno">
+            <div class="text">สอนโหลดตัวรันXeno ฟรี!!</div>
+            <button class="button" onclick="window.location.href='Xeno.html'">คลิก</button>
+        </div>
+    </div>
 
-  <footer>
-    &copy; 2025 AEGONA CHANNEL. สงวนลิขสิทธิ์.<br>
-    ติดต่อเรา: <a href="mailto:aegonach@gmail.com" style="color: #8de9c4;">aegonach@gmail.com</a>
-  </footer>
+    <!-- ตัวนับจำนวนผู้เข้าชม -->
+    <div class="visitor-counter">
+        จำนวนผู้เข้าชม: <span id="counter">กำลังโหลด...</span>
+    </div>
 
-  <script>
-    let count = localStorage.getItem("pageViews");
-    if (!count) {
-      count = 0;
-    }
-    count++;
-    localStorage.setItem("pageViews", count);
-    document.getElementById("counter").textContent = count;
-  </script>
+    <footer>
+        &copy; 2025 AEGONA CHANNEL. สงวนลิขสิทธิ์.
+        <br>ติดต่อเรา: aegonach@gmail.com
+    </footer>
+
+    <!-- สคริปต์นับผู้เข้าชมรวมจริง -->
+    <script>
+        fetch('https://api.countapi.xyz/hit/aegonachannel.com/visits')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('counter').textContent = data.value;
+            })
+            .catch(() => {
+                document.getElementById('counter').textContent = "ไม่สามารถโหลดข้อมูลได้";
+            });
+    </script>
 </body>
 </html>
