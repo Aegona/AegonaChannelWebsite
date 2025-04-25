@@ -1,103 +1,105 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+	<link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEGONA CHANNEL</title>
     <meta name="google-adsense-account" content="ca-pub-7300768637767766">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300768637767766" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="IMG_3062.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+    <title>AEGONA CHANNEL</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
             font-family: 'Kanit', sans-serif;
-            background: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
             color: #333;
         }
         .header {
-            background: linear-gradient(90deg, #2ecc71, #27ae60);
+            background: #27ae60;
             color: white;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
-            font-size: 28px;
-            font-weight: bold;
             display: flex;
-            justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            justify-content: center;
+            font-size: 26px;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
         .logo {
             width: 60px;
             height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
+            background: url('images/logo.jpg') no-repeat center center;
+            background-size: cover;
             margin-right: 15px;
+            border-radius: 50%;
         }
         .menu {
-            display: flex;
-            justify-content: center;
-            margin: 20px;
-            gap: 15px;
+            position: absolute;
+            right: 20px;
+            top: 50px;
         }
         .menu button {
-            padding: 10px 20px;
-            border: none;
+            display: block;
+            margin: 10px;
+            padding: 12px 20px;
+            border: 2px solid #27ae60;
             background: white;
-            border: 2px solid #2ecc71;
-            color: #2ecc71;
+            color: #27ae60;
             font-size: 16px;
-            border-radius: 8px;
+            border-radius: 6px;
             cursor: pointer;
             transition: 0.3s;
         }
         .menu button:hover {
-            background: #2ecc71;
+            background: #27ae60;
             color: white;
         }
         .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
             padding: 20px;
-            max-width: 1200px;
-            margin: auto;
         }
         .product {
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 450px;
+            margin: 15px;
             text-align: center;
-            transition: transform 0.3s;
+            padding: 20px;
+            transition: transform 0.2s;
         }
         .product:hover {
             transform: translateY(-5px);
         }
         .product img {
             width: 100%;
-            height: 200px;
+            height: auto;
             object-fit: cover;
+            border-radius: 8px;
         }
         .text {
-            padding: 15px;
             font-size: 20px;
+            margin: 12px 0;
             font-weight: 600;
+            color: #222;
         }
         .button {
-            background: #27ae60;
-            color: white;
+            display: inline-block;
             padding: 12px 20px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: 0.3s;
             font-size: 16px;
+            color: white;
+            background: #27ae60;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
         }
         .button:hover {
             background: #219150;
@@ -106,20 +108,12 @@
             position: fixed;
             bottom: 20px;
             left: 20px;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0, 0, 0, 0.65);
             color: white;
             padding: 10px 15px;
-            border-radius: 10px;
+            border-radius: 8px;
             font-size: 14px;
-        }
-        @media (max-width: 600px) {
-            .header {
-                flex-direction: column;
-                font-size: 22px;
-            }
-            .logo {
-                margin-bottom: 10px;
-            }
+            font-weight: 500;
         }
     </style>
 </head>
@@ -130,14 +124,14 @@
     </div>
 
     <div class="menu">
-        <button>เมนู 1</button>
-        <button>เมนู 2</button>
+        <button>MENU1</button>
+        <button>MENU2</button>
     </div>
 
     <div class="container">
         <div class="product">
             <img src="ปกคริปAction&Stuff.png" alt="สินค้า">
-            <div class="text">แจก Addon Action & Stuff !!<br>ฟรี มายคราฟ มือถือ</div>
+            <div class="text">แจก Addon Action & Stuff !! <br> ฟรี มายคราฟ มือถือ</div>
             <button class="button" onclick="window.location.href='Action&Stuff.html'">คลิก</button>
         </div>
         <div class="product">
@@ -147,7 +141,7 @@
         </div>
         <div class="product">
             <img src="ปกสอนโหลดXeno.png" alt="สินค้า">
-            <div class="text">สอนโหลดตัวรัน Xeno ฟรี!!</div>
+            <div class="text">สอนโหลดตัวรันXeno ฟรี!!</div>
             <button class="button" onclick="window.location.href='Xeno.html'">คลิก</button>
         </div>
     </div>
@@ -157,7 +151,8 @@
     </div>
 
     <script>
-        let count = localStorage.getItem("pageViews") || 0;
+        let count = localStorage.getItem("pageViews");
+        if (!count) count = 0;
         count++;
         localStorage.setItem("pageViews", count);
         document.getElementById("counter").textContent = count;
