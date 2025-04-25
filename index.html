@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-	<link rel="stylesheet" href="stye.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-7300768637767766">
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300768637767766"
-     crossorigin="anonymous"></script>
-	
-	<link rel="icon" type="image/x-icon" href="IMG_3062.jpg">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300768637767766"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="IMG_3062.jpg">
     <title>AEGONA CHANNEL</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -104,7 +105,6 @@
             background: green;
             color: white;
         }
-        /* ส่วนที่เพิ่ม: ตัวนับผู้เข้าชม */
         .visitor-counter {
             position: fixed;
             bottom: 20px;
@@ -115,6 +115,13 @@
             border-radius: 8px;
             font-size: 16px;
         }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #222;
+            color: #fff;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -122,49 +129,56 @@
         <img src="IMG_3062.jpg" alt="โลโก้" class="logo">
         AEGONA CHANNEL
     </div>
-    
+
     <div class="menu">
-        <button>MENU1</button>
-        <button>MENU2</button>
+        <button onclick="window.location.href='about.html'">เกี่ยวกับเรา</button>
+        <button onclick="window.location.href='contact.html'">ติดต่อเรา</button>
     </div>
-    
+
+    <!-- แนะนำเว็บไซต์ -->
+    <div style="padding: 20px; max-width: 800px; margin: auto; font-size: 18px;">
+        <h2>เกี่ยวกับ AEGONA CHANNEL</h2>
+        <p>
+            ยินดีต้อนรับสู่ AEGONA CHANNEL เว็บไซต์ที่รวมเนื้อหา Minecraft สำหรับผู้เล่นมือถือ เช่น Addon, Mod, และวิธีการติดตั้งต่าง ๆ
+            เว็บไซต์นี้จัดทำขึ้นเพื่อแบ่งปันสิ่งดี ๆ ให้แฟน ๆ เกม Minecraft โดยไม่เสียค่าใช้จ่าย พร้อมคลิปแนะนำและลิงก์ดาวน์โหลดที่ปลอดภัย
+        </p>
+    </div>
+
     <div class="container">
         <div class="product">
             <img src="ปกคริปAction&Stuff.png" alt="สินค้า">
             <div class="text">แจก Addon Action & Stuff !! <br> ฟรี มายคราฟ มือถือ</div>
-            <button class="button-85" role="button" onclick="window.location.href='Action&Stuff.html'">คลิก</button>
+            <button class="button" onclick="window.location.href='Action&Stuff.html'">คลิก</button>
         </div>
         <div class="product">
             <img src="หกดหำๆำพฟหดหกดดหกหกดหกเหกเ.png" alt="สินค้า">
             <div class="text">สอนโหลด addon essential ฟรี!!</div>
-            <button class="button-85" role="button" onclick="window.location.href='Essential.html'">คลิก</button>
+            <button class="button" onclick="window.location.href='Essential.html'">คลิก</button>
         </div>
         <div class="product">
             <img src="ปกสอนโหลดXeno.png" alt="สินค้า">
             <div class="text">สอนโหลดตัวรันXeno ฟรี!!</div>
-            <button class="button-85" role="button" onclick="window.location.href='Xeno.html'">คลิก</button>
+            <button class="button" onclick="window.location.href='Xeno.html'">คลิก</button>
         </div>
     </div>
 
-    <!-- ส่วนที่เพิ่ม: ตัวนับจำนวนผู้เข้าชม -->
+    <!-- ตัวนับจำนวนผู้เข้าชม -->
     <div class="visitor-counter">
         จำนวนผู้เข้าชม: <span id="counter">0</span>
     </div>
 
-    <script>
-        // ดึงค่าจาก Local Storage
-        let count = localStorage.getItem("pageViews");
+    <footer>
+        &copy; 2025 AEGONA CHANNEL. สงวนลิขสิทธิ์.
+        <br>ติดต่อเรา: aegonach@gmail.com
+    </footer>
 
-        // ถ้ายังไม่มีค่า ให้เริ่มต้นที่ 0
+    <script>
+        let count = localStorage.getItem("pageViews");
         if (!count) {
             count = 0;
         }
-
-        // เพิ่มค่าทุกครั้งที่เปิดหน้า
         count++;
         localStorage.setItem("pageViews", count);
-
-        // แสดงผล
         document.getElementById("counter").textContent = count;
     </script>
 </body>
