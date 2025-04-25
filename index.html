@@ -161,26 +161,16 @@
         </div>
     </div>
 
-    <!-- ตัวนับจำนวนผู้เข้าชม -->
+    <!-- ตัวนับจำนวนผู้เข้าชม (แทนที่ด้วยตัวนับของ FreeCounter) -->
     <div class="visitor-counter">
-        จำนวนผู้เข้าชม: <span id="counter">กำลังโหลด...</span>
+        <a href="https://www.freecounterstat.com" title="free counters for websites">
+            <img src="https://counter4.optistats.ovh/private/freecounterstat.php?c=a8qwzucy7zp32mjzg6q9pp6tr1a4cagx" border="0" title="free counters for websites" alt="free counters for websites">
+        </a>
     </div>
 
     <footer>
         &copy; 2025 AEGONA CHANNEL. สงวนลิขสิทธิ์.
         <br>ติดต่อเรา: aegonach@gmail.com
     </footer>
-
-    <!-- สคริปต์นับผู้เข้าชมรวมจริง -->
-    <script>
-        fetch('https://api.countapi.xyz/hit/aegonachannel.com/visits')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('counter').textContent = data.value;
-            })
-            .catch(() => {
-                document.getElementById('counter').textContent = "ไม่สามารถโหลดข้อมูลได้";
-            });
-    </script>
 </body>
 </html>
