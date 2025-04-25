@@ -3,124 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-adsense-account" content="ca-pub-7300768637767766">
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300768637767766"
-        crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="IMG_3062.jpg">
     <title>AEGONA CHANNEL</title>
-
+    <meta name="google-adsense-account" content="ca-pub-7300768637767766">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300768637767766" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="IMG_3062.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: #f8f9fa;
+            color: #333;
         }
         .header {
-            background: green;
+            background: linear-gradient(90deg, #2ecc71, #27ae60);
             color: white;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .logo {
             width: 60px;
             height: 60px;
-            background: url('images/logo.jpg') no-repeat center center;
-            background-size: cover;
-            margin-right: 15px;
             border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            gap: 15px;
+        }
+        .menu button {
+            padding: 10px 20px;
+            border: none;
+            background: white;
+            border: 2px solid #2ecc71;
+            color: #2ecc71;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .menu button:hover {
+            background: #2ecc71;
+            color: white;
         }
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             padding: 20px;
+            max-width: 1200px;
+            margin: auto;
         }
         .product {
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 500px;
-            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
             text-align: center;
-            padding: 15px;
-            transition: transform 0.2s;
+            transition: transform 0.3s;
         }
         .product:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px);
         }
         .product img {
             width: 100%;
-            height: auto;
+            height: 200px;
             object-fit: cover;
-            border-radius: 10px;
         }
         .text {
-            font-size: 22px;
-            margin: 10px 0;
-            font-weight: bold;
-            color: rgb(0, 0, 0);
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 600;
         }
         .button {
-            display: inline-block;
-            padding: 15px 20px;
-            font-size: 18px;
+            background: #27ae60;
             color: white;
-            background: green;
+            padding: 12px 20px;
+            margin-bottom: 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: 0.3s;
+            font-size: 16px;
         }
         .button:hover {
-            background: darkgreen;
-        }
-        .menu {
-            position: absolute;
-            right: 20px;
-            top: 50px;
-        }
-        .menu button {
-            display: block;
-            margin: 10px;
-            padding: 12px;
-            border: 2px solid green;
-            background: white;
-            color: green;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
-        }
-        .menu button:hover {
-            background: green;
-            color: white;
+            background: #219150;
         }
         .visitor-counter {
             position: fixed;
             bottom: 20px;
             left: 20px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0,0,0,0.6);
             color: white;
             padding: 10px 15px;
-            border-radius: 8px;
-            font-size: 16px;
+            border-radius: 10px;
+            font-size: 14px;
         }
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #222;
-            color: #fff;
-            margin-top: 40px;
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                font-size: 22px;
+            }
+            .logo {
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -131,23 +130,14 @@
     </div>
 
     <div class="menu">
-        <button onclick="window.location.href='about.html'">เกี่ยวกับเรา</button>
-        <button onclick="window.location.href='contact.html'">ติดต่อเรา</button>
-    </div>
-
-    <!-- แนะนำเว็บไซต์ -->
-    <div style="padding: 20px; max-width: 800px; margin: auto; font-size: 18px;">
-        <h2>เกี่ยวกับ AEGONA CHANNEL</h2>
-        <p>
-            ยินดีต้อนรับสู่ AEGONA CHANNEL เว็บไซต์ที่รวมเนื้อหา Minecraft สำหรับผู้เล่นมือถือ เช่น Addon, Mod, และวิธีการติดตั้งต่าง ๆ
-            เว็บไซต์นี้จัดทำขึ้นเพื่อแบ่งปันสิ่งดี ๆ ให้แฟน ๆ เกม Minecraft โดยไม่เสียค่าใช้จ่าย พร้อมคลิปแนะนำและลิงก์ดาวน์โหลดที่ปลอดภัย
-        </p>
+        <button>เมนู 1</button>
+        <button>เมนู 2</button>
     </div>
 
     <div class="container">
         <div class="product">
             <img src="ปกคริปAction&Stuff.png" alt="สินค้า">
-            <div class="text">แจก Addon Action & Stuff !! <br> ฟรี มายคราฟ มือถือ</div>
+            <div class="text">แจก Addon Action & Stuff !!<br>ฟรี มายคราฟ มือถือ</div>
             <button class="button" onclick="window.location.href='Action&Stuff.html'">คลิก</button>
         </div>
         <div class="product">
@@ -157,26 +147,17 @@
         </div>
         <div class="product">
             <img src="ปกสอนโหลดXeno.png" alt="สินค้า">
-            <div class="text">สอนโหลดตัวรันXeno ฟรี!!</div>
+            <div class="text">สอนโหลดตัวรัน Xeno ฟรี!!</div>
             <button class="button" onclick="window.location.href='Xeno.html'">คลิก</button>
         </div>
     </div>
 
-    <!-- ตัวนับจำนวนผู้เข้าชม -->
     <div class="visitor-counter">
         จำนวนผู้เข้าชม: <span id="counter">0</span>
     </div>
 
-    <footer>
-        &copy; 2025 AEGONA CHANNEL. สงวนลิขสิทธิ์.
-        <br>ติดต่อเรา: aegonach@gmail.com
-    </footer>
-
     <script>
-        let count = localStorage.getItem("pageViews");
-        if (!count) {
-            count = 0;
-        }
+        let count = localStorage.getItem("pageViews") || 0;
         count++;
         localStorage.setItem("pageViews", count);
         document.getElementById("counter").textContent = count;
